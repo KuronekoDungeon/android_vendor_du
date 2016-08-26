@@ -14,6 +14,17 @@
 
 LOCAL_PATH:=$(call my-dir)
 
+#ifeq ($(TARGET_ARCH),x86)
+#include $(CLEAR_VARS)
+#LOCAL_MODULE       := Chromium
+#LOCAL_MODULE_TAGS  := optional
+#LOCAL_MODULE_CLASS := APPS
+#LOCAL_SRC_FILES    := x86/Chromium.apk
+#LOCAL_CERTIFICATE  := PRESIGNED
+#LOCAL_OVERRIDES_PACKAGES := Browser
+#LOCAL_MODULE_PATH  := $(TARGET_OUT_APPS)
+#include $(BUILD_PREBUILT)
+#else
 #include $(CLEAR_VARS)
 #LOCAL_MODULE := Chromium
 #LOCAL_SRC_FILES := $(LOCAL_MODULE).apk
@@ -23,6 +34,7 @@ LOCAL_PATH:=$(call my-dir)
 #LOCAL_OVERRIDES_PACKAGES := Browser
 #LOCAL_MULTILIB := both
 #include $(BUILD_PREBUILT)
+#endif
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := DUCertified
@@ -32,6 +44,7 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_CERTIFICATE := PRESIGNED
 LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
 include $(BUILD_PREBUILT)
+
 
 
 
