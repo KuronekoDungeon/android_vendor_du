@@ -85,6 +85,10 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/du/overlay/common
 PRODUCT_COPY_FILES += \
     vendor/du/prebuilt/common/media/bootanimation.zip:system/media/bootanimation.zip
 
+# Phone Location
+PRODUCT_COPY_FILES += \
+    vendor/du/prebuilt/common/media/suda-phonelocation.dat:system/media/location/suda-phonelocation.dat
+
 # HFM Files
 PRODUCT_COPY_FILES += \
         vendor/du/prebuilt/common/etc/hosts.alt:system/etc/hosts.alt \
